@@ -1,4 +1,4 @@
-package pri.learn.designmode.designmode.buildermodel;
+package pri.learn.designmode.designmode.builder;
 
 public class MainTest {
     public static void main(String[] args) {

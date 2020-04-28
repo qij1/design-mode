@@ -1,9 +1,9 @@
-package pri.learn.designmode.designmode.buildermodel;
+package pri.learn.designmode.designmode.builder;
 
-public class WelcomeBuilder extends Builder {
+public class GoodbyeBuilder extends Builder {
 
-    public WelcomeBuilder(){
-        msg = new WelcomeMessage();
+    public GoodbyeBuilder(){
+        msg = new GoodbyeMessage();
     }
 
     @Override

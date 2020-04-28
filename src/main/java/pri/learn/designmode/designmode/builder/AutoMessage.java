@@ -1,4 +1,4 @@
-package pri.learn.designmode.designmode.buildermodel;
+package pri.learn.designmode.designmode.builder;
 
 import lombok.Data;
 
