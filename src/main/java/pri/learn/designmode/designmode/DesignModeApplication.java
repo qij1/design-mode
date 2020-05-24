@@ -21,6 +21,8 @@ import pri.learn.designmode.designmode.strategypattern.CashType;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 @SpringBootApplication
 @Slf4j
@@ -32,9 +34,19 @@ public class DesignModeApplication {
 
     @Bean
     public void testStringJoin(){
-        Set<String> strin = new HashSet<>();
-        strin.add("111");
-        System.out.println(String.join(",",strin));
+//        Set<String> strin = new HashSet<>();
+//        strin.add("111");
+//        System.out.println(String.join(",",strin));
+    }
+
+    public void testRegex(){
+        Pattern pattern = Pattern.compile("insert\\s+into\\s+table\\s+(\\w+\\.?\\w+)\\s+");
+        String sql = "insert into table aaaa.bbbb partition select * from fffff";
+        Matcher matcher = pattern.matcher(sql);
+        while (matcher.find()){
+            System.out.println(matcher.group(0));
+            System.out.println(matcher.group(1));
+        }
     }
 
 
@@ -65,14 +77,14 @@ public class DesignModeApplication {
 //        concreteDecoratorB.operation();
 
         //装饰模式实际例子-----装扮
-        Person person = new Person("小范");
-        BigTrouser bigTrouser = new BigTrouser();
-        Sneaker sneaker = new Sneaker();
-        TShirts tShirts = new TShirts();
-        bigTrouser.decorate(person);
-        sneaker.decorate(bigTrouser);
-        tShirts.decorate(sneaker);
-        tShirts.show();
+//        Person person = new Person("小范");
+//        BigTrouser bigTrouser = new BigTrouser();
+//        Sneaker sneaker = new Sneaker();
+//        TShirts tShirts = new TShirts();
+//        bigTrouser.decorate(person);
+//        sneaker.decorate(bigTrouser);
+//        tShirts.decorate(sneaker);
+//        tShirts.show();
 
     }
 
