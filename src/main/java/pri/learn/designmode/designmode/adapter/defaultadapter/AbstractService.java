@@ -1,7 +1,7 @@
 package pri.learn.designmode.designmode.adapter.defaultadapter;
 
 public interface AbstractService {
-    public void serviceOperation1();
-    public int serviceOperation2();
-    public String serviceOperation3();
+    void serviceOperation1();
+    int serviceOperation2();
+    String serviceOperation3();
 }
